@@ -6,7 +6,7 @@ const body = document.querySelector("body");
 buttonModals.forEach((item) => {
   item.addEventListener("click", () => {
     modalWindow.style.display = "flex";
-    body.classList.add("noscroll");
+    body.classList.add("notscroll");
   });
 });
 
@@ -14,11 +14,11 @@ modalWindow.addEventListener("click", (e) => {
   const isModal = e.target.closest(".modal__inner");
   if (!isModal) {
     modalWindow.style.display = "none";
-    body.classList.remove("noscroll");
+    body.classList.remove("notscroll");
   }
 });
 
 modalClose.addEventListener("click", () => {
   modalWindow.style.display = "none";
-  body.classList.remove("noscroll");
+  body.classList.remove("notscroll");
 });
